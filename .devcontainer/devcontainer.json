@@ -2,7 +2,7 @@
     "name": "scikit-learn",
     "dockerComposeFile": ["../docker-compose.yml"],
     "service": "scikit-learn",
-    "workspaceFolder": ".",
+    "workspaceFolder": "/scikit-learn",
     "customizations": {
         "vscode": {
             "settings": {"terminal.integrated.shell.linux": "/bin/bash"},

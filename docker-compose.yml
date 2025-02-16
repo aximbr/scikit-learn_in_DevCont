@@ -8,7 +8,7 @@ services:
       dockerfile: Dockerfile
     image: scikit-learn
     volumes:
-      - .:/
+      - .:/scikit-learn
     ports:
       - 8888:8888
-    command: "jupyter notebook --notebook-dir=/ --ip=0.0.0.0 --port=8888 --no-browser --allow-root --ServerApp.token='' --ServerApp.password=''"
+    command: "jupyter notebook --notebook-dir=/scikit-learn --ip=0.0.0.0 --port=8888 --no-browser --allow-root --ServerApp.token='' --ServerApp.password=''"
