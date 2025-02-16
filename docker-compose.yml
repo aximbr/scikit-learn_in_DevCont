@@ -1,0 +1,14 @@
+services:
+  scikit-learn:
+    env_file:
+      - path: ./devcontainer.env
+        required: false #ignore if not find
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    image: scikit-learn
+    volumes:
+      - .:/
+    ports:
+      - 8888:8888
+    command: "jupyter notebook --notebook-dir=/ --ip=0.0.0.0 --port=8888 --no-browser --allow-root --ServerApp.token='' --ServerApp.password=''"
